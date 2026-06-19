@@ -19,7 +19,7 @@ class Settings(BaseSettings):
 
     api_prefix: str = "/api/v1"
 
-    database_url: str = "postgresql+asyncpg://archana:archana@localhost:5432/archana_commerce"
+    database_url: str = "postgresql+asyncpg://archana:Admin@localhost:5432/Admin"
     redis_url: str = "redis://localhost:6379/0"
 
     jwt_secret_key: str = "change-me-in-production-use-openssl-rand-hex-32"

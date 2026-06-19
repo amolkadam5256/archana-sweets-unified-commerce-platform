@@ -44,8 +44,8 @@ jobs:
         image: postgres:17-alpine
         env:
           POSTGRES_USER: archana
-          POSTGRES_PASSWORD: archana
-          POSTGRES_DB: archana_commerce
+          POSTGRES_PASSWORD: Admin
+          POSTGRES_DB: Admin
         ports:
           - 5432:5432
         options: >-
@@ -86,13 +86,13 @@ jobs:
       - name: Run migrations
         working-directory: backend
         env:
-          DATABASE_URL: postgresql+asyncpg://archana:archana@localhost:5432/archana_commerce
+          DATABASE_URL: postgresql+asyncpg://archana:Admin@localhost:5432/Admin
           REDIS_URL: redis://localhost:6379/0
         run: alembic upgrade head
 
       - name: Test
         working-directory: backend
         env:
-          DATABASE_URL: postgresql+asyncpg://archana:archana@localhost:5432/archana_commerce
+          DATABASE_URL: postgresql+asyncpg://archana:Admin@localhost:5432/Admin
           REDIS_URL: redis://localhost:6379/0
         run: pytest -v

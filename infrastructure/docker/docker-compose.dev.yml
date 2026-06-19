@@ -4,14 +4,14 @@ services:
     container_name: archana-postgres
     environment:
       POSTGRES_USER: archana
-      POSTGRES_PASSWORD: archana
-      POSTGRES_DB: archana_commerce
+      POSTGRES_PASSWORD: Admin
+      POSTGRES_DB: Admin
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U archana -d archana_commerce"]
+      test: ["CMD-SHELL", "pg_isready -U archana -d Admin"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -71,7 +71,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql+asyncpg://archana:archana@postgres:5432/archana_commerce
+      DATABASE_URL: postgresql+asyncpg://archana:Admin@postgres:5432/Admin
       REDIS_URL: redis://redis:6379/0
       JWT_SECRET_KEY: dev-secret-change-in-production
       CORS_ORIGINS: '["http://localhost:3000","http://localhost:3001"]'
