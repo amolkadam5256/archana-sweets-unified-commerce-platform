@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "@archana/config/tailwind";
+
+:root {
+  --background: #fffbf5;
+  --foreground: #1a1208;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: oklch(0.97 0.02 50);
+  --color-brand-100: oklch(0.93 0.04 50);
+  --color-brand-200: oklch(0.86 0.08 50);
+  --color-brand-300: oklch(0.78 0.12 45);
+  --color-brand-400: oklch(0.7 0.15 40);
+  --color-brand-500: oklch(0.62 0.18 35);
+  --color-brand-600: oklch(0.54 0.17 32);
+  --color-brand-700: oklch(0.46 0.15 30);
+  --color-brand-800: oklch(0.38 0.12 28);
+  --color-brand-900: oklch(0.3 0.09 25);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}

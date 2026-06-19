@@ -1,0 +1,5 @@
+{
+  "extends": "@archana/config/typescript/react-library",
+  "compilerOptions": { "rootDir": "src", "outDir": "dist" },
+  "include": ["src"]
+}
